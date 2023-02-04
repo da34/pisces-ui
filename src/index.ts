@@ -1,5 +1,10 @@
-import { createApp } from "vue";
+import { createApp } from "vue/dist/vue.esm-browser";
+import Yui from './entry'
 
-import SFCButton from './SFCButton.vue'
-
-createApp(SFCButton).mount('#app')
+createApp({
+  template:`
+            <div>
+                <YButton>普通按钮</YButton>
+            </div>
+        `
+}).use(Yui).mount('#app')
