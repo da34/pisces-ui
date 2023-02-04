@@ -20,6 +20,11 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  
+  icon: {
+    type: String,
+    default: "",
+  },
 }
 
 const size = {
@@ -59,11 +64,14 @@ export default defineComponent({
       text-white
       hover:text-white
       text-${props.plain ? props.color + "-500" : "white-500"}
+      
       transition duration-300 ease-in-out transform hover:scale-105
           mx-1
+          
       `}
   >
-    {slots.default ? slots.default() : ''}
+      { props.icon !== "" ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ""}
+      {slots.default ? slots.default() : ''}
     </button>
   }
 })

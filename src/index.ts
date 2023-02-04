@@ -24,7 +24,13 @@ createApp({
                 <YButton size="large">大按钮</YButton>
                 </div>
 
-
+ <div style="margin-top: 1em;">
+         <YButton color="blue" round plain icon="search" ></YButton>
+         <YButton color="green" round plain icon="edit" ></YButton>
+         <YButton color="gray" round plain icon="check" ></YButton>
+         <YButton color="yellow" round plain icon="message" ></YButton>
+         <YButton color="red" round plain icon="delete" ></YButton>
+     </div>
             </div>
         `
 }).use(Yui).mount('#app')

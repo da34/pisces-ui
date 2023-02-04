@@ -23,6 +23,16 @@ const safelist = [
   ...Array.from({ length: 8 }, (_, i) => `px-${i + 1}`),
   ...Array.from({ length: 8 }, (_, i) => `py-${i + 1}`),
   ...["rounded-full", "rounded-lg"],
+  ...[
+    "search",
+    "edit",
+    "check",
+    "message",
+    "star-off",
+    "delete",
+    "add",
+    "share",
+  ].map((v) => `i-ic-baseline-${v}`),
 ]
 
 export default () =>
