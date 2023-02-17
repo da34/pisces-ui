@@ -41,11 +41,11 @@
     "vite": "^4.1.1",
     "vitepress": "1.0.0-alpha.45",
     "vitepress-theme-demoblock": "^2.0.2",
-    "vitest": "^0.28.4"
+    "vitest": "^0.28.4",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2"
   },
   "dependencies": {
-    "@commitlint/cli": "^17.4.2",
-    "@commitlint/config-conventional": "^17.4.2",
     "vue": "^3.2.47"
   }
 }
