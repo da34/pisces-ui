@@ -1,13 +1,12 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
+import { defineConfig, UserConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Unocss from './config/unocss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 
-export default defineConfig({
-  
+export const config = {
   plugins: [
     vue(),
     vueJsx(),
@@ -18,7 +17,7 @@ export default defineConfig({
     sourcemap: true, // 输出单独 source文件
     lib: {
       entry: './src/entry.ts',
-      name: 'YUI',
+      name: 'PiscesUI',
       fileName: module => `pisces-ui-${module}.js`,
       formats: ['es', 'umd', 'iife']
     },
@@ -33,6 +32,7 @@ export default defineConfig({
         exports: 'named'
       },
     },
+    outDir: "./dist",
   },
   test: {
     // enable jest-like global test APIs
@@ -45,4 +45,5 @@ export default defineConfig({
       web: [/.[tj]sx$/]
     }
   }
-});
+}
+export default defineConfig(config as UserConfig);

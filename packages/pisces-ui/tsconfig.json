@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "moduleResolution": "Node"
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "packages/pisces-ui/src/**/*.ts",
@@ -11,6 +11,6 @@
     "packages/pisces-ui/config/*.ts"
   ],
   "exclude": [
-    "../../node_modules"
+    "node_modules"
   ]
 }
