@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Node"
+  },
+  "include": [
+    "packages/pisces-ui/src/**/*.ts",
+    "packages/pisces-ui/src/**/*.d.ts",
+    "packages/pisces-ui/src/**/*.tsx",
+    "packages/pisces-ui/src/**/*.vue",
+    "packages/pisces-ui/config/*.ts"
+  ],
+  "exclude": [
+    "../../node_modules"
+  ]
+}

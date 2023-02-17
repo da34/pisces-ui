@@ -17,7 +17,7 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Lint
-        run: pnpm run lint
+        run: cd packages/pisces-ui && pnpm run lint
   UnitTest:
     # 单元测试任务
     # The type of runner that the job will run on
@@ -31,4 +31,4 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Test
-        run: pnpm run test:run
+        run: cd packages/pisces-ui && pnpm run test:run
