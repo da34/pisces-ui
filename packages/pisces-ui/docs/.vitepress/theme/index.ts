@@ -1,5 +1,5 @@
 import DefaultTheme  from 'vitepress/theme'
-import YUI from '../../../pisces-ui/src/entry'
+import YUI from '../../../src/entry'
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import {useComponents} from "./useComponents";
 
