@@ -1,0 +1,11 @@
+export * from './types/entry'
+import PiscesUI from './types/entry'
+export default PiscesUI
+
+declare module 'vue' {
+export interface GlobalComponents {
+{{#each components}}
+  {{name}}: typeof import("./types/entry").{{component}},
+{{/each}}
+}
+}

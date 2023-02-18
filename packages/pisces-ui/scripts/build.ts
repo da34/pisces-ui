@@ -3,6 +3,7 @@ import * as fs from "fs-extra";
 import * as path from "path";
 import { config } from "../vite.config";
 import { build, InlineConfig, defineConfig, UserConfig } from "vite";
+import { generateDTS } from "./type";
 const buildAll = async () => {
   // const inline: InlineConfig =
   //   viteConfig;
@@ -16,7 +17,7 @@ const buildAll = async () => {
   const packageJson = require("../package.json");
   packageJson.main = "pisces-ui.umd.js";
   packageJson.module = "pisces-ui.esm.js";
-  // packageJson.types = "pisces-ui.d.ts";
+  packageJson.types = "pisces-ui.d.ts";
   fs.outputFile(
     path.resolve(baseOutDir, `package.json`),
     JSON.stringify(packageJson, null, 2)
@@ -29,7 +30,7 @@ const buildAll = async () => {
   // );
   
   // 生成配置DTS配置文件入口
-  // generateDTS(path.resolve(config.build.outDir, `smarty-ui.esm.js`),)
+  // await generateDTS(path.resolve(config.build.outDir, `pisces-ui.es.js`),)
   
   
   const srcDir = path.resolve(__dirname, "../src/");

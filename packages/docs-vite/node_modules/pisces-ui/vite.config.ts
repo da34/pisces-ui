@@ -3,6 +3,7 @@ import { defineConfig, UserConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Unocss from './config/unocss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 
@@ -10,11 +11,12 @@ export const config = {
   plugins: [
     vue(),
     vueJsx(),
-    Unocss()
+    Unocss(),
+    dts(),
   ],
   build: {
     minify: true,
-    sourcemap: true, // 输出单独 source文件
+    // sourcemap: true, // 输出单独 source文件
     lib: {
       entry: './src/entry.ts',
       name: 'PiscesUI',

@@ -9,6 +9,9 @@
 <p align="center">
     <a href="https://github.com/da34/y-ui/actions/workflows/main.yml">
     <img src="https://github.com/da34/y-ui/actions/workflows/main.yml/badge.svg?branch=main" />
+    <a href="https://codecov.io/gh/da34/pisces-ui" > 
+ <img src="https://codecov.io/gh/da34/pisces-ui/branch/main/graph/badge.svg?token=047Q4NEK05"/> 
+ </a>
 </a>
 </p>
 

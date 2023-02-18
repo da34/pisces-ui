@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true
+    "declaration": true, /* 生成相关的 '.d.ts' 文件。 */
+    "declarationDir": "../dist/types", /* '.d.ts' 文件输出目录 */
+    "jsx": "preserve"
   },
   "include": [
-    "packages/pisces-ui/src/**/*.ts",
-    "packages/pisces-ui/src/**/*.d.ts",
-    "packages/pisces-ui/src/**/*.tsx",
-    "packages/pisces-ui/src/**/*.vue",
-    "packages/pisces-ui/config/*.ts"
+    "src/**/*.*",
+    "src/shims-vue.d.ts"
   ],
   "exclude": [
     "node_modules"
