@@ -10,3 +10,4 @@ dist
 .idea
 /test
 *.zip
+/packages/docs-vite/node_modules/

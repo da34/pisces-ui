@@ -20,10 +20,69 @@ importers:
       pisces-ui: workspace:^0.1.0
       vue: ^3.2.47
     dependencies:
-      pisces-ui: link:../pisces-ui
+      pisces-ui: link:../pisces-ui/dist
       vue: 3.2.47
 
   packages/pisces-ui:
+    specifiers:
+      '@iconify-json/ic': ^1.1.12
+      '@types/node': ^18.11.19
+      '@typescript-eslint/eslint-plugin': ^5.50.0
+      '@typescript-eslint/parser': ^5.50.0
+      '@vitejs/plugin-vue': ^4.0.0
+      '@vitejs/plugin-vue-jsx': ^3.0.0
+      '@vitest/coverage-istanbul': ^0.28.5
+      '@vue/eslint-config-prettier': ^7.0.0
+      '@vue/test-utils': ^2.2.10
+      babel-eslint: ^10.1.0
+      eslint: ^8.33.0
+      eslint-formatter-pretty: ^4.1.0
+      eslint-plugin-json: ^3.1.0
+      eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-vue: ^9.9.0
+      esno: ^0.16.3
+      fs-extra: ^11.1.0
+      handlebars: ^4.7.7
+      happy-dom: ^8.2.6
+      prettier: ^2.8.3
+      typescript: ^4.9.5
+      unocss: ^0.49.4
+      vite-plugin-dts: 2.0.0-beta.1
+      vitepress: 1.0.0-alpha.45
+      vitepress-theme-demoblock: ^2.0.2
+      vitest: ^0.28.4
+      vue: ^3.2.47
+    dependencies:
+      vue: 3.2.47
+    devDependencies:
+      '@iconify-json/ic': 1.1.13
+      '@types/node': 18.13.0
+      '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
+      '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
+      '@vitejs/plugin-vue': 4.0.0_vue@3.2.47
+      '@vitejs/plugin-vue-jsx': 3.0.0_vue@3.2.47
+      '@vitest/coverage-istanbul': 0.28.5_happy-dom@8.4.3
+      '@vue/eslint-config-prettier': 7.0.0_yrlhudqyxg2l7qvwle5bdpmrli
+      '@vue/test-utils': 2.2.10_vue@3.2.47
+      babel-eslint: 10.1.0_eslint@8.34.0
+      eslint: 8.34.0
+      eslint-formatter-pretty: 4.1.0
+      eslint-plugin-json: 3.1.0
+      eslint-plugin-prettier: 4.2.1_yrlhudqyxg2l7qvwle5bdpmrli
+      eslint-plugin-vue: 9.9.0_eslint@8.34.0
+      esno: 0.16.3
+      fs-extra: 11.1.0
+      handlebars: 4.7.7
+      happy-dom: 8.4.3
+      prettier: 2.8.4
+      typescript: 4.9.5
+      unocss: 0.49.6
+      vite-plugin-dts: 2.0.0-beta.1_@types+node@18.13.0
+      vitepress: 1.0.0-alpha.45_@types+node@18.13.0
+      vitepress-theme-demoblock: 2.0.2_@types+node@18.13.0
+      vitest: 0.28.5_happy-dom@8.4.3
+
+  packages/pisces-ui/dist:
     specifiers:
       '@iconify-json/ic': ^1.1.12
       '@types/node': ^18.11.19
@@ -83,6 +142,9 @@ importers:
       vitepress: 1.0.0-alpha.45_@types+node@18.13.0
       vitepress-theme-demoblock: 2.0.2_@types+node@18.13.0
       vitest: 0.28.5_happy-dom@8.4.3
+
+  packages/pisces-ui/dist/Button:
+    specifiers: {}
 
 packages:
 
