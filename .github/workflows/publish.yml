@@ -5,29 +5,28 @@ on:
     branches: [publish-pisces-ui]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-      - name: Install modules
-        run: npm install
-      - name: Build
-        run: cd packages/pisces-ui && npm run build
 
-  publish-npm:
     name: "publish npm"
-    needs: build
-    runs-on: ubuntu-latest
+
+    environment: npm
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@master
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+          version: 6.31.0
+      - name: Install modules
+        run: pnpm install
+      - name: Build
+        run: cd packages/publish-pisces-ui && npm run build
+      - name: "Publish to the npm registry"
+        uses: primer/publish@3.0.0
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
+        with:
+          default_branch: "publish-pisces-ui"
+          dir: "packages/publish-pisces-ui/dist"
+          npm_args: "--unsafe-perm --allow-same-version"
