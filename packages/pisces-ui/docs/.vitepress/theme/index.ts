@@ -1,5 +1,6 @@
 import DefaultTheme  from 'vitepress/theme'
-import YUI from '../../../src/entry'
+// @ts-ignore
+import PiscesUI from 'pisces-ui'
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import {useComponents} from "./useComponents";
 
@@ -7,7 +8,7 @@ export default {
   ...DefaultTheme ,
   enhanceApp({ app }) {
     // DefaultTheme.enhanceApp(ctx)
-    app.use(YUI)
+    app.use(PiscesUI)
     useComponents(app)
   },
 }
