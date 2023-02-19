@@ -2,21 +2,29 @@ import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 export default {
   title: 'pisces-ui',
   description: 'Vue3 + Typescript',
+  lang: "zh-cn",
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
-    // siteTitle: 'Vue3 + Typescript 构建的 UI 组件库',
-    logo: 'https://camo.githubusercontent.com/ff60d684183b22539cdad4506bb6a4cd85104a9c6a8e202fe78c3a9f0ee80ff3/68747470733a2f2f7265736f757263652e6c7379626f792e636e2f626c6f672f7374617469632f696d672f6c6f676f2e636439626234332e706e67',
+    socialLinks: [{ icon: "github", link: "https://github.com/da34" }],
+    logo: '/logo.png',
     sidebar: {
       '/': [
-        { text: 'Guide', link: '/' },
+        { text: '⚡ 快速开始', link: '/guide/' },
         {
-          text: 'General',
+          text: '📦 通用组件',
           items: [
             { text: 'Button 按钮', link: '/components/button/' },
           ]
         }
       ]
+    },
+    nav: [
+      { text: '快速开始', link: '/guide' }
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023-present da34'
     }
   },
   markdown: {
